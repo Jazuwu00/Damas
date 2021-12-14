@@ -27,7 +27,14 @@ public class Menu extends JFrame {
         salir.setLayout(new FlowLayout());
         jugar2 = new JButton("jugar");
         JButton cargarpartida1 = new JButton("Cargar Partida");
-        //json aca
+        JButton cargarpartida1 = new JButton("Cargar Partida");
+        cargarpartida1.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                   GuardarCargar.load();
+        //TODAVIA NO FUNCIONA :P
+                   }
+               });
         JButton reglas = new JButton("Ver reglas");
         reglas.addActionListener(new ActionListener() {
             @Override
