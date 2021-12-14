@@ -67,8 +67,20 @@ public class VentanaDamas extends JPanel implements ActionListener, MouseListene
         menu = new JMenu("Opciones");
         barra.add(menu);
         guardar = new JMenuItem("Guardar partida");
-        //guardar.addActionListener(this);
-        // JSOn aqui
+        guardar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                GuardarCargar.save(piezas, siguesuturno);
+            }
+        });
+        menu.add(guardar);
+        salir = new JMenuItem("Salir");
+        salir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
         menu.add(guardar);
         volverAlMenu = new JMenuItem("Salir");
         volverAlMenu.addActionListener(e -> System.exit(0));
