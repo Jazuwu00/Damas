@@ -1,8 +1,6 @@
-//import jdk.nashorn.internal.parser.JSONParser;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -22,21 +20,6 @@ public class GuardarCargar{
                tabler.add(tableroFichas[i][j]);
            }
        }
-
-       /* JSONArray tabler = new JSONArray();
-        for(int i = 0; i < tablero.length; i++){
-            for(int j = 0; j < tablero.length; j++){
-                tabler.put(tablero[i][j]);
-            }
-        }
-        JSONArray pieza = new JSONArray();
-        for(int i = 0; i < piezas.length; i++){
-            for(int j = 0; j < piezas.length; j++){
-                tabler.put(piezas[i][j]);
-            }
-        }*/
-
-       //  tody.put("Posiciones",pieza);
         estadoPartida.put("Tablero",tabler);
 
         try (FileWriter file = new FileWriter("test.json")) {
